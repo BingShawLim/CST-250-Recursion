@@ -14,6 +14,15 @@
 // Show the title of the program
 Console.WriteLine("Greatest Common Divisor Recursion");
 
+// Declare and initialize
+int number1 = 440, number2 = 80, result = 0;
+
+// Call the GCD method
+result = Utility.GreatestCommonDivisor(number1, number2);
+
+// Print the result to the user
+Console.WriteLine($"The GCD of {number1} and {number2} is {result}");
+
 //----------------------------------------------------------
 // End of the Main Method
 //----------------------------------------------------------
