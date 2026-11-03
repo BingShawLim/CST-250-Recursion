@@ -323,9 +323,10 @@ static class Utility
     /// <param name="filledCells">The cells that were filled, in order</param>
     internal static void PrintFillOrder(BoardModel board, List<CellModel> filledCells)
     {
-        // Print the column numbers in white
+        // Print the column numbers in white. The row numbers in this map get an extra
+        // space so a two-digit fill number never touches its row number.
         Console.ForegroundColor = ConsoleColor.White;
-        Console.Write(" ");
+        Console.Write("  ");
         for (int colNum = 0; colNum < board.Size; colNum++)
         {
             Console.Write($" {colNum + 1,2}");
@@ -335,7 +336,7 @@ static class Utility
         for (int row = 0; row < board.Size; row++)
         {
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write($"{row + 1,2}");
+            Console.Write($"{row + 1,2} ");
             for (int col = 0; col < board.Size; col++)
             {
                 // A filled cell shows its fill number (cells after 99 show a wave)
